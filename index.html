@@ -52,16 +52,16 @@
                 </ul>
             </address>
 
-            <button class="burger-btn" type="button">
+            <button class="burger-btn" type="button" data-menu-open>
                 <svg class="burger-icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-burger"></use>
                 </svg>
             </button>
         </div>
 
-        <div class="mobile-menu is-open">
+        <div class="mobile-menu" data-menu>
             <div class=" container mobile-menu-container">
-                <button class="mobile-close-btn" type="button" data-modal-close>
+                <button class="mobile-close-btn" type="button" data-menu-close>
                     <svg class="close-btn-icon" width="8" height="8">
                         <use href="./images/icons.svg#icon-close"></use>
                     </svg>
@@ -131,7 +131,7 @@
     <main>
 
     <!--hero-->
-        <section class="hero hidden">
+        <section class="hero">
         <div class="container">
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
             <button class="hero-btn" type="button" data-modal-open>Order Service</button>
@@ -542,5 +542,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
