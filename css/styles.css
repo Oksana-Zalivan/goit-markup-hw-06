@@ -43,8 +43,6 @@ a {
 /*common*/
 .container {
     max-width: 320px;
-    margin: 0 auto;
-    padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -55,13 +53,14 @@ a {
 
 @media screen and (min-width: 1158px) {
     .container {
-        max-width: 1158px;
-        padding: 0 15px;
+        max-width: 1440px;
     }
 }
 
 /*header*/
 .nav {
+    width: 320px;
+    height: 56px;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
             0 1px 1px 0 rgba(46, 47, 66, 0.16),
@@ -88,7 +87,9 @@ a {
     letter-spacing: 0.03em;
     line-height: 1.17;
     text-transform: uppercase;
-    padding: 16px 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
     display: block;
 }
 
@@ -113,6 +114,11 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+    .nav {
+        width: 768px;
+        height: 72px;
+    }
+
     .header-logo {
         padding: 24px 0px;
         margin-right: 120px;
@@ -215,6 +221,7 @@ a {
 
 @media screen and (min-width: 1158px) {
     .nav {
+        width: 1440px;
         box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
             0px 1px 1px rgba(46, 47, 66, 0.16),
             0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -411,7 +418,6 @@ a {
     width: 100%;
     max-width: 320px;
     height: 432px;
-    margin: 0 auto;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-mob-min.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -420,6 +426,8 @@ a {
 
 @media (min-resolution: 192dpi) {
     .hero {
+        max-width: 768px;
+        height: 436px;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url("../images/hero/people-office-des@2x-min.jpg");;
     }
@@ -472,9 +480,10 @@ a {
 
     @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
         .hero {
+            width: 1440px;
             background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-tab@2x-min.jpg");
         }
-    }
+
 
     .hero-title {
         font-size: 56px;
@@ -505,10 +514,8 @@ a {
 
 /* benefits section */
 .benefits {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 72px;
-    
 }
 
 .visually-hidden {
@@ -527,14 +534,13 @@ a {
 .benefits-list {
     display: flex;
     flex-direction: column;
-    gap: 72px;
-    margin: 96px 0;
     padding: 0 16px;
     background-color: #ffffff;
     width: 100%;
     max-width: 100%;
     height: auto;
     box-sizing: border-box;
+    padding: 120px 156px;
 }
 
 .benefits-item {
@@ -567,7 +573,9 @@ a {
     .benefits-list {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 72px;
+        padding: 96px 16px;
     }
 
     .benefits-item {       
@@ -581,11 +589,6 @@ a {
 }
 
 @media screen and (min-width:1158px) {
-    .benefits {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
-
     .benefits-box {
         border: 1px solid #8e8f99;
         display: flex;
@@ -609,4 +612,88 @@ a {
     }
 }
 
+/* team */
+.team-title {
+    color: #2e2f42;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 96px;
+    margin-right: 79px;
+    margin-bottom: 72px;
+    margin-left: 79px;
+}
 
+.team-list {
+    display: flex;
+    flex-direction: column;
+    column-gap: 72px;
+}
+
+.team-item {
+    background-color: #ffffff;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team-card {
+    padding: 32px 0;
+}
+
+.team-name {
+    color: #2e2f42;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.team-position {
+    color: #434455;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.team-box {
+    position: relative;
+    fill: #f4f4fd;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.social-link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #404bbf;
+}
+
+.team-icon {
+    fill: #f4f4fd;
+}
