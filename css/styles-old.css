@@ -103,6 +103,8 @@
     background-color: #ffffff;
     padding-top: 120px;
     padding-bottom: 120px;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 

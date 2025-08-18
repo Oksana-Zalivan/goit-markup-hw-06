@@ -47,13 +47,13 @@ a {
     padding: 0 16px;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
     }
 }
 
-@media screen and (min-width:1158px) {
+@media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
         padding: 0 15px;
@@ -112,7 +112,7 @@ a {
     fill: #2f2f37;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .header-logo {
         padding: 24px 0px;
         margin-right: 120px;
@@ -213,7 +213,7 @@ a {
 }
 
 
-@media screen and (min-width:1158px) {
+@media screen and (min-width: 1158px) {
     .nav {
         box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
             0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -400,7 +400,7 @@ a {
     fill: #f4f4fd;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .mobile-menu {
         display: none;
     }
@@ -408,13 +408,21 @@ a {
 
 /* hero section */
 .hero {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     height: 432px;
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-mob-min.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin: 0 auto;
+}
+
+@media (min-resolution: 192dpi) {
+    .hero {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url("../images/hero/people-office-des@2x-min.jpg");;
+    }
 }
 
 .hero-title {
@@ -454,11 +462,18 @@ a {
     cursor: pointer;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .hero {
         width: 768px;
         height: 436px;
         padding-top: 112px 0;
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-tab-min.jpg");
+    }
+
+    @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-tab@2x-min.jpg");
+        }
     }
 
     .hero-title {
@@ -468,13 +483,19 @@ a {
         margin-bottom: 36px;   }
 }
 
-@media screen and (min-width:1158px) {
+@media screen and (min-width: 1158px) {
     .hero {
-        height: 600px;
         max-width: 1440px;
+        height: 600px;
         padding: 188px 0;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto;
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-des-min.jpg");
+    }
+
+    @media screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-des@2x-min.jpg");
+        }
     }
 
     .hero-title {
@@ -485,14 +506,9 @@ a {
 /* benefits section */
 .benefits {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-direction: column;
     gap: 72px;
-    width: 288px;
-    height: 696px;
-    margin: 96px 16px;
-    background-color: #ffffff;
+    
 }
 
 .visually-hidden {
@@ -510,8 +526,15 @@ a {
 
 .benefits-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 72px;
+    margin: 96px 0;
+    padding: 0 16px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .benefits-item {
@@ -541,11 +564,18 @@ a {
 }
 
 @media screen and (min-width:768px) {
+    .benefits-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
     .benefits-item {       
         width: calc((100% - 24px) / 2);
     }
 
-    .benefits-subtitle {
+    .benefits-subtitle,
+    .benefits-text {
         text-align: left;
     }
 }
@@ -571,5 +601,12 @@ a {
     .benefits-list {
         flex-wrap: nowrap;
         justify-content: space-between;
-        gap: 24px;   }
+        gap: 24px;
+    }
+
+    .benefits-item {
+        width: calc((100% - 72px) / 4);
+    }
 }
+
+
