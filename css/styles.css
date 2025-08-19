@@ -43,6 +43,8 @@ a {
 /*common*/
 .container {
     max-width: 320px;
+    margin: 0 auto;
+    padding: 0 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -53,14 +55,13 @@ a {
 
 @media screen and (min-width: 1158px) {
     .container {
-        max-width: 1440px;
+        max-width: 1158px;
+        padding: 0 15px;
     }
 }
 
 /*header*/
 .nav {
-    width: 320px;
-    height: 56px;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
             0 1px 1px 0 rgba(46, 47, 66, 0.16),
@@ -89,7 +90,6 @@ a {
     text-transform: uppercase;
     padding-top: 16px;
     padding-bottom: 16px;
-    padding-left: 16px;
     display: block;
 }
 
@@ -114,11 +114,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-    .nav {
-        width: 768px;
-        height: 72px;
-    }
-
     .header-logo {
         padding: 24px 0px;
         margin-right: 120px;
@@ -221,8 +216,7 @@ a {
 
 @media screen and (min-width: 1158px) {
     .nav {
-        width: 1440px;
-        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+            box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
             0px 1px 1px rgba(46, 47, 66, 0.16),
             0px 1px 6px rgba(46, 47, 66, 0.08);
     }
@@ -419,17 +413,16 @@ a {
 /* hero section */
 .hero {
     max-width: 320px;
-    height: 432px;
+    margin: 0 auto;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-mob-min.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding: 72px 0;
 }
 
 @media (min-resolution: 192dpi) {
     .hero {
-        max-width: 768px;
-        height: 436px;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url("../images/hero/people-office-des@2x-min.jpg");;
     }
@@ -443,7 +436,6 @@ a {
     line-height: 1.11;
     text-align: center;
     max-width: 216px;
-    padding-top: 72px;
     margin: 0px auto;
     margin-bottom: 72px;
 }
@@ -474,9 +466,8 @@ a {
 
 @media screen and (min-width: 768px) {
     .hero {
-        width: 768px;
-        height: 436px;
-        padding-top: 112px 0;
+        max-width: 768px;
+        padding: 112px 0;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-tab-min.jpg");
     }
 }
@@ -499,7 +490,6 @@ a {
 @media screen and (min-width: 1158px) {
     .hero {
         max-width: 1440px;
-        height: 600px;
         padding: 188px 0;
         margin: 0 auto;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/hero/people-office-des-min.jpg");
@@ -518,8 +508,8 @@ a {
 
 /* benefits section */
 .benefits {
-    width: 100%;
-    display: flex;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .visually-hidden {
@@ -538,13 +528,8 @@ a {
 .benefits-list {
     display: flex;
     flex-direction: column;
-    padding: 0 16px;
+    gap: 72px;
     background-color: #ffffff;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    padding: 120px 156px;
 }
 
 .benefits-item {
@@ -579,7 +564,6 @@ a {
         flex-wrap: wrap;
         column-gap: 24px;
         row-gap: 72px;
-        padding: 96px 16px;
     }
 
     .benefits-item {       
@@ -609,7 +593,6 @@ a {
         flex-wrap: nowrap;
         justify-content: space-between;
         gap: 24px;
-        padding: 120px 156px;
     }
 
     .benefits-item {
