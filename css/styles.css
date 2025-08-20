@@ -1,7 +1,3 @@
-.hidden {
-    display: none;
-}
-
 /* global styles */
 body {
     font-family: "Roboto", sans-serif;
@@ -268,13 +264,11 @@ a {
 
 .mobile-menu-container {
     position:relative;
-    margin-left: 16px;
     padding-top: 72px;
     padding-bottom: 48px;
     display: flex;
     flex-direction: column;
     height: 100%;
-
 }
 
 .mobile-close-btn {
@@ -599,11 +593,24 @@ a {
         width: 264px;
         width: calc((100% - 72px) / 4);
     }
+
+        .benefits-subtitle {
+            font-weight: 500;
+            font-size: 20px;
+        }
+    
+        .benefits-text {
+            color: #434455;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.02em;
+            line-height: 1.5;   }
 }
 
 /* team */
 .team {
     background-color: #f4f4fd;
+    padding: 96px 0;
 }
 
 .team-title {
@@ -614,19 +621,18 @@ a {
     line-height: 1.11;
     text-align: center;
     text-transform: capitalize;
-    padding-top: 96px;
-    padding-right: 79px;
-    padding-bottom: 0;
-    padding-left: 79px;
+    margin-bottom: 96px;
 }
 
 .team-list {
     display: flex;
     flex-direction: column;
-    column-gap: 72px;
+    gap: 72px;
+    justify-content: center;
 }
 
 .team-item {
+    width: 264px;
     background-color: #ffffff;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -697,22 +703,10 @@ a {
         flex-wrap: wrap;
         column-gap: 24px;
         row-gap: 64px;
-        padding: 96px 108px;
-    }
-
-    .team-item {
-        width: calc((100% - 24px) / 2);
     }
 }
 
 @media screen and (min-width:1158px) {
-    .team-list {
-        padding-top: 72px;
-        padding-right: 156px;
-        padding-bottom: 120px;
-        padding-left: 156px;
-    }
-
     .team-item {
         width: calc((100% - 72px) / 4);
     }
@@ -720,6 +714,7 @@ a {
 
 /* portfolio */
 .portfolio {
+    padding: 96px 0;
     background-color: #ffffff;
 }
 
@@ -737,7 +732,7 @@ a {
 .portfolio-list {
     display: flex;
     flex-direction: column;
-    column-gap: 48px;
+    gap: 48px;
 }
 
 .portfolio-item {
@@ -774,7 +769,7 @@ a {
 }
 
 .portfolio-card {
-    padding: 0 16px;
+    padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
 }
@@ -785,8 +780,6 @@ a {
     font-size: 20px;
     letter-spacing: 0.02em;
     line-height: 1.2;
-    margin-top: 32px;
-    margin-right: 100px;
     margin-bottom: 8px;
 }
 
@@ -796,14 +789,9 @@ a {
     font-size: 16px;
     letter-spacing: 0.02em;
     line-height: 1.5;
-    margin-bottom: 32px;
 }
 
 @media screen and (min-width:768px) {
-    .portfolio {
-        margin: 96px 16px;
-    }
-
     .portfolio-list {
         flex-direction: row;
         flex-wrap: wrap;
@@ -813,10 +801,6 @@ a {
 }
 
 @media screen and (min-width:1158px) {
-    .portfolio {
-        margin: 120px 156px;
-    }
-
     .portfolio-list {
         display: flex;
         row-gap: 48px;
@@ -930,18 +914,11 @@ a {
     fill: #f4f4fd;
 }
 
-.footer-form-container {
-    width: 453px;
-    height: 80px;
-    margin-left: 80px;
-}
-
 .footer-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 100%;
-    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -1003,25 +980,23 @@ a {
 }
 
 @media screen and (min-width:768px) {
-    .footer {
-        width: 768px;
-        height: 456px;
-    }
-
     .footer .container {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: flex-start;
         text-align: left;
-        gap: 24px;
+        column-gap: 24px;
+        row-gap: 72px;
+    }
+
+    .box {
+        padding: 0 108px;
     }
 
     .footer-container {
         max-width: 264px;
         height: 112px;
-        margin-bottom: 72px;
-        margin-left: 108px;
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -1030,7 +1005,6 @@ a {
     .footer-social-media {
         width: 208px;
         height: 80px;
-        margin-bottom: 72px;
     }
 
     .footer-form {
@@ -1038,10 +1012,6 @@ a {
         flex-direction: row;
         margin: 0;
         gap: 24px;
-    }
-
-    .footer-form-container {
-        margin-left: 108px;
     }
 
     .footer-form-input {
@@ -1056,8 +1026,6 @@ a {
 
 @media screen and (min-width:1158px) {
     .footer {
-        width: 1440px;
-        height: 312px;
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -1066,6 +1034,10 @@ a {
         flex-wrap: nowrap;
         align-items: baseline;
         gap: 0;
+    }
+
+    .box {
+        padding: 0;
     }
 
     .footer-container {
@@ -1105,7 +1077,7 @@ a {
 }
 
 .modal {
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1295,6 +1267,8 @@ a {
     .modal {
         width: 408px;
         height: 584px;
+        padding-right: 24px;
+        padding-left: 24px;
     }
 
     .modal-text {
